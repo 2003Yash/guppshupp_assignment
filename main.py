@@ -12,7 +12,9 @@ from sentence_transformers import SentenceTransformer
 # ============================================================
 # CONFIG
 # ============================================================
-MY_HF_TOKEN = "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"
+import streamlit as st
+
+MY_HF_TOKEN = st.secrets["HF_TOKEN"]
 MODEL_NAME = "meta-llama/Meta-Llama-3-8B-Instruct"
 client = InferenceClient(MODEL_NAME, token=MY_HF_TOKEN)
 
